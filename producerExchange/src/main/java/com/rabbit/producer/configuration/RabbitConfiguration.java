@@ -1,9 +1,6 @@
 package com.rabbit.producer.configuration;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.FanoutExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,6 +13,12 @@ public class RabbitConfiguration {
     @Bean
     public FanoutExchange fanoutExchange() {
         return new FanoutExchange("fanoutExchange");
+    }
+
+    //If the producer is disconnected, the messages in the queue will be lost
+    @Bean
+    public Queue autoDeleteQueue() {
+        return new AnonymousQueue();
     }
 
     @Bean
@@ -36,5 +39,10 @@ public class RabbitConfiguration {
     @Bean
     public Binding bindingQueue2(FanoutExchange fanout, Queue fanoutQueue2) {
         return BindingBuilder.bind(fanoutQueue2).to(fanout);
+    }
+
+    @Bean
+    public Binding bindingAutoDeleteQueue(FanoutExchange fanout, Queue autoDeleteQueue) {
+        return BindingBuilder.bind(autoDeleteQueue).to(fanout);
     }
 }

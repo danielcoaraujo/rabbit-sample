@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfiguration {
 
+    //If you dont create a bean for each queue, an exception may be thrown in case of the queue doesn't exist.
     @Bean
     public Queue test() {
         return new Queue("test");
