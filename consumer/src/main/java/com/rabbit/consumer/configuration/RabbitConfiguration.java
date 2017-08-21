@@ -1,7 +1,7 @@
 package com.rabbit.consumer.configuration;
 
 import com.rabbit.consumer.model.QueueNames;
-import com.rabbit.consumer.service.Receiver;
+import com.rabbit.consumer.model.Receiver;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
@@ -18,34 +18,44 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfiguration {
 
+//    @Bean
+//    Queue queue() {
+//        return new Queue(QueueNames.TEST, false);
+//    }
+//
+//    @Bean
+//    TopicExchange exchange() {
+//        return new TopicExchange("spring-boot-exchange");
+//    }
+//
+//    @Bean
+//    Binding binding(Queue queue, TopicExchange exchange) {
+//        return BindingBuilder.bind(queue).to(exchange).with(QueueNames.TEST);
+//    }
+//
+//    @Bean
+//    SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
+//                                             MessageListenerAdapter listenerAdapter) {
+//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+//        container.setConnectionFactory(connectionFactory);
+//        container.setQueueNames(QueueNames.TEST);
+//        container.setMessageListener(listenerAdapter);
+//        return container;
+//    }
+//
+//    @Bean
+//    MessageListenerAdapter listenerAdapter(Receiver receiver) {
+//        return new MessageListenerAdapter(receiver, "receiveMessage");
+//    }
+
     @Bean
-    Queue queue() {
-        return new Queue(QueueNames.TEST, false);
+    public Queue hello() {
+        return new Queue("hello");
     }
 
     @Bean
-    TopicExchange exchange() {
-        return new TopicExchange("spring-boot-exchange");
-    }
-
-    @Bean
-    Binding binding(Queue queue, TopicExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(QueueNames.TEST);
-    }
-
-    @Bean
-    SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
-                                             MessageListenerAdapter listenerAdapter) {
-        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-        container.setConnectionFactory(connectionFactory);
-        container.setQueueNames(QueueNames.TEST);
-        container.setMessageListener(listenerAdapter);
-        return container;
-    }
-
-    @Bean
-    MessageListenerAdapter listenerAdapter(Receiver receiver) {
-        return new MessageListenerAdapter(receiver, "receiveMessage");
+    public Receiver receiver() {
+        return new Receiver();
     }
 
 }
