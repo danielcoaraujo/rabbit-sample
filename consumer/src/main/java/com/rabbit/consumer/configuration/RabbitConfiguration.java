@@ -17,6 +17,11 @@ public class RabbitConfiguration {
     }
 
     @Bean
+    public Queue fanoutQueue1() {
+        return new Queue("fanoutQueue1");
+    }
+
+    @Bean
     public Receiver receiver() {
         return new Receiver();
     }

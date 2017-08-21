@@ -6,7 +6,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 /**
  * Created by daniel on 18/08/17.
  */
-@RabbitListener(queues = "test")
+@RabbitListener(queues = {"test", "fanoutQueue2"})
 public class Receiver2 {
 
     public static final String instance = "2";
