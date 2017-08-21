@@ -1,6 +1,6 @@
-package com.rabbit.producer.configuration;
+package com.rabbit.consumer2.configuration;
 
-import com.rabbit.producer.service.Producer;
+import com.rabbit.consumer2.model.Receiver2;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,8 +16,9 @@ public class RabbitConfiguration {
         return new Queue("hello");
     }
 
-//    @Bean
-//    public Producer sender() {
-//        return new Producer();
-//    }
+    @Bean
+    public Receiver2 receiver() {
+        return new Receiver2();
+    }
+
 }
