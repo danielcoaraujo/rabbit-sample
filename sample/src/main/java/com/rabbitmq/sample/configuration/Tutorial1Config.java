@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Profile;
 /**
  * Created by daniel on 18/08/17.
  */
-@Profile({"hello-world"})
 @Configuration
 public class Tutorial1Config {
 
