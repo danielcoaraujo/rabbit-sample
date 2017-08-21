@@ -16,7 +16,7 @@ public class Tut1Sender {
     @Autowired
     private Queue queue;
 
-//    @Scheduled(fixedDelay = 1000, initialDelay = 500)
+    @Scheduled(fixedDelay = 1000, initialDelay = 500)
     public void send() {
         String message = "Hello World!";
         this.template.convertAndSend(queue.getName(), message);

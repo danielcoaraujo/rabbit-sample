@@ -12,19 +12,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitAmqpTutorialsRunner implements CommandLineRunner {
 
-//    @Value("${tutorial.client.duration:0}")
-//    private int duration;
+    @Value("${tutorial.client.duration:0}")
+    private int duration;
 
-//    @Autowired
-//    private ConfigurableApplicationContext ctx;
+    @Autowired
+    private ConfigurableApplicationContext ctx;
 
     @Override
     public void run(String... arg0) throws Exception {
-        while (true) {
-//            System.out.println("Ready ... running");
-        }
-//        System.out.println("Ready ... running for " + duration + "ms");
-//        Thread.sleep(duration);
-//        ctx.close();
+        System.out.println("Ready ... running for " + duration + "ms");
+        Thread.sleep(duration);
+        ctx.close();
     }
 }
