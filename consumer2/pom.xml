@@ -22,6 +22,27 @@
         <spring-cloud.version>Dalston.SR2</spring-cloud.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>dadhx05.interno</id>
+            <name>libs-release-local</name>
+            <url>http://dadhx05.interno:8081/repository/maven-public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>dadhx05.interno</id>
+            <name>libs-release-local</name>
+            <url>http://dadhx05.interno:8081/repository/maven-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
