@@ -1,6 +1,5 @@
 package com.rabbit.consumer.model;
 
-import org.apache.tomcat.jni.Time;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 

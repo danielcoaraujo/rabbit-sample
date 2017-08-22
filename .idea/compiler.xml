@@ -9,6 +9,7 @@
         <module name="consumer" />
         <module name="consumer2" />
         <module name="producer" />
+        <module name="producer (1)" />
         <module name="sample" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="consumer" target="1.8" />
       <module name="consumer2" target="1.8" />
       <module name="producer" target="1.8" />
+      <module name="producer (1)" target="1.8" />
       <module name="sample" target="1.8" />
       <module name="sample2" target="1.5" />
       <module name="sampleconsumer" target="1.5" />

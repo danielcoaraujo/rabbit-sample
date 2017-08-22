@@ -1,6 +1,5 @@
 package com.rabbit.consumer2.model;
 
-import org.apache.tomcat.jni.Time;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 
 import java.time.LocalDateTime;
