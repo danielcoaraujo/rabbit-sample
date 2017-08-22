@@ -6,7 +6,10 @@
 	<groupId>com.rabbit.producer</groupId>
 	<artifactId>producer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>../consumer3</module>
+    </modules>
+    <packaging>pom</packaging>
 
 	<name>producer</name>
 	<description>Demo project for Spring Boot</description>

@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="consumer" />
         <module name="consumer2" />
-        <module name="producer" />
+        <module name="consumer3" />
         <module name="producer (1)" />
         <module name="producerFanoutExchange" />
         <module name="sample" />
@@ -17,6 +17,7 @@
     <bytecodeTargetLevel>
       <module name="consumer" target="1.8" />
       <module name="consumer2" target="1.8" />
+      <module name="consumer3" target="1.8" />
       <module name="producer" target="1.8" />
       <module name="producer (1)" target="1.8" />
       <module name="producerFanoutExchange" target="1.8" />

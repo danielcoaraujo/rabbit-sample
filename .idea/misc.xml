@@ -4,11 +4,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/producer/pom.xml" />
         <option value="$PROJECT_DIR$/sample/pom.xml" />
         <option value="$PROJECT_DIR$/consumer2/pom.xml" />
         <option value="$PROJECT_DIR$/producerExchange/pom.xml" />
         <option value="$PROJECT_DIR$/producerFanoutExchange/pom.xml" />
+        <option value="$PROJECT_DIR$/producer/pom.xml" />
       </list>
     </option>
   </component>
